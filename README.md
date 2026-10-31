@@ -72,12 +72,6 @@ flowchart LR
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [paper](https://arxiv.org/abs/2511.14460) | Agentic RL with step-level MDP transitions; Online Policy Distillation branch bridges RL training and distillation. |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [report](https://arxiv.org/abs/2609.08183) | Open-weight 4B/9B agent models built via agentic post-training with a routing harness; the Jev decision primitives. |
 
-### Data agents
-
-| System | What it is |
-|---|---|
-| [dash](https://github.com/agno-agi/dash) | A self-learning data agent built with systems-engineering primitives. |
-
 ### Distillation toolchains
 
 "Distillation" now means three different things; this list tracks the agent-facing end of all three:
@@ -125,6 +119,7 @@ The training loop's fuel is data the model (or an agent) generates itself:
 
 - [awesome-self-improving-coding-agents](https://github.com/vicfei/awesome-self-improving-coding-agents) — sibling: agents improving code (SWE-verifiable work)
 - [awesome-ai-native](https://github.com/vicfei/awesome-ai-native) — sibling: the organizational layer
+- [awesome-chatbi](https://github.com/vicfei/awesome-chatbi) — sibling: data serving — ChatBI / text2SQL / 智能问数 systems & practice
 - [KaiWU5/Awesome-AI4AI](https://github.com/KaiWU5/Awesome-AI4AI) — the paper-survey companion to this space (223 papers)
 - [wasiahmad/Awesome-LLM-Synthetic-Data](https://github.com/wasiahmad/Awesome-LLM-Synthetic-Data) — synthetic-data generation reading list
 - [hibayesian/awesome-automl-papers](https://github.com/hibayesian/awesome-automl-papers) — the pre-agent AutoML canon

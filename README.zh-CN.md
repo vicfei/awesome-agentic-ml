@@ -72,12 +72,6 @@ flowchart LR
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [论文](https://arxiv.org/abs/2511.14460) | 步级 MDP 转移的智能体 RL；在线策略蒸馏（OPD）分支打通 RL 训练与蒸馏。 |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [报告](https://arxiv.org/abs/2609.08183) | 以 routing harness 做 agentic 后训练得到的开源 4B/9B agent 模型；Jev 决策原语。 |
 
-### 数据智能体
-
-| 系统 | 是什么 |
-|---|---|
-| [dash](https://github.com/agno-agi/dash) | 用系统工程原语构建的自学习数据智能体。 |
-
 ### 蒸馏工具链
 
 "蒸馏"如今有三种含义；本列表追踪其中面向 agent 的一端：
@@ -125,6 +119,7 @@ flowchart LR
 
 - [awesome-self-improving-coding-agents](https://github.com/vicfei/awesome-self-improving-coding-agents) —— 姊妹列表：改进代码的 agent（SWE 可验证的工作）
 - [awesome-ai-native](https://github.com/vicfei/awesome-ai-native) —— 姊妹列表：组织层
+- [awesome-chatbi](https://github.com/vicfei/awesome-chatbi) —— 姊妹列表：数据的服务层——ChatBI / text2SQL / 智能问数的系统与实践
 - [KaiWU5/Awesome-AI4AI](https://github.com/KaiWU5/Awesome-AI4AI) —— 本领域的论文综述配套（223 篇）
 - [wasiahmad/Awesome-LLM-Synthetic-Data](https://github.com/wasiahmad/Awesome-LLM-Synthetic-Data) —— 合成数据生成阅读清单
 - [hibayesian/awesome-automl-papers](https://github.com/hibayesian/awesome-automl-papers) —— agent 时代之前的 AutoML 典籍
