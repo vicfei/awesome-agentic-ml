@@ -57,6 +57,8 @@ flowchart LR
 
 ### 自动化实验
 
+*回路的驱动者——选择算子、读取结果、决定下一处修改的 agent。*
+
 | 系统 | 自动化了什么 |
 |---|---|
 | [autoresearch](https://github.com/karpathy/autoresearch) —— Karpathy | 单 GPU 通宵训练实验（一晚约 100 个）：agent 改 `train.py`，留下使 val_bpb 改进的，丢弃其余。 |
@@ -67,12 +69,16 @@ flowchart LR
 
 ### 训练框架与后训练
 
+*能力获取算子：慢（天级）、上限高。*
+
 | 系统 | 是什么 |
 |---|---|
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [论文](https://arxiv.org/abs/2511.14460) | 步级 MDP 转移的智能体 RL；在线策略蒸馏（OPD）分支打通 RL 训练与蒸馏。 |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [报告](https://arxiv.org/abs/2609.08183) | 以 routing harness 做 agentic 后训练得到的开源 4B/9B agent 模型；Jev 决策原语。 |
 
 ### 蒸馏工具链
+
+*能力转移算子：改进如何跨模型世代传递。*
 
 "蒸馏"如今有三种含义；本列表追踪其中面向 agent 的一端：
 
@@ -81,6 +87,18 @@ flowchart LR
 | [torchdistill](https://github.com/yoshitomo-matsubara/torchdistill) | 经典知识蒸馏（logits/特征）——26+ 方法，2019 年维护至今的长者。 |
 | [EasyDistill](https://github.com/modelscope/easydistill) | LLM 时代的数据蒸馏：生成/评估/过滤/改写算子组合成 SFT/DPO 流水线，含 agent 轨迹。 |
 | [distilly](https://github.com/titanwings/distilly) | 认知蒸馏：人 → 技能。（组织侧的故事在 [awesome-ai-native](https://github.com/vicfei/awesome-ai-native)。） |
+
+### 权重编辑（weight-space programming）
+
+*行为手术算子：分钟级、局部、且结构上自指——改进器是正在编辑模型的模型。三者中最年轻（2026 年 11 月）；据此审慎看待其主张。*
+
+| 工作 | 是什么 |
+|---|---|
+| [Sparks of Weight Space Programming](https://rikiyat.github.io/blog/weight-space-programming/) · [完整实验日志](https://github.com/RikiyaT/lm_understand-logs) —— MIT CSAIL | 源头：LLM 原生读取权重（这个策略网络玩的是哪个游戏、这个语言学了哪门语言）并直接书写。对 Qwen3.5-0.8B 做 0.016% 的 rank-1 编辑消除思考循环，MATH-500 从 7.9% 升至 48.1%——主要是解锁既有能力而非注入知识。仅有博客、未经同行评审；完整日志已公开。 |
+| [审计临床决策网络](https://arxiv.org/abs/2611.05341) | 首篇后续论文：以权重空间编程为透镜审计临床决策网络。 |
+| [图像修复扩散模型](https://arxiv.org/abs/2611.04268) | 技术猜想 + 一个递归改进环——WSP × RSI 的首次交叉。 |
+
+值得注意的衍生实验：[weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) —— 47.5 万 CNN 权重全部由闭式统计写就、无任何梯度：测试准确率 73.7%（同规模梯度训练网 82.4%）。
 
 ## 论文：自训练配方
 
@@ -110,6 +128,7 @@ flowchart LR
 2. **实验可比性缺标准。** autoresearch 的固定预算技巧在单 GPU 上有效；跨平台比较 agent 主导的实验尚无标准。
 3. **许可证不明。** 本领域多个快速迭代的系统采用非 OSI 许可（source-available、NOASSERTION）——商用前务必核查。
 4. **蒸馏治理。** 当 agent 把教师蒸馏进学生（或把同事蒸馏成技能）时，来源与授权链条尚不存在。
+5. **权重编辑的验证。** 外科手术式编辑绕过训练期对齐——删除拒绝行为与删除思考循环一样容易（参见 abliteration），而低秩编辑在大模型上的验证方法尚不存在。
 
 ## 🤖 雷达
 

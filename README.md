@@ -57,6 +57,8 @@ flowchart LR
 
 ### Autonomous experimentation
 
+*The loop driver — the agent that picks an operator, reads the results, and decides the next change.*
+
 | System | What it automates |
 |---|---|
 | [autoresearch](https://github.com/karpathy/autoresearch) — Karpathy | Single-GPU overnight training experiments (~100/night): agent edits `train.py`, keeps what improves val_bpb, discards the rest. |
@@ -67,12 +69,16 @@ flowchart LR
 
 ### Training frameworks and post-training
 
+*The capability-acquisition operator: slow (days), high ceiling.*
+
 | System | What it is |
 |---|---|
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [paper](https://arxiv.org/abs/2511.14460) | Agentic RL with step-level MDP transitions; Online Policy Distillation branch bridges RL training and distillation. |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [report](https://arxiv.org/abs/2609.08183) | Open-weight 4B/9B agent models built via agentic post-training with a routing harness; the Jev decision primitives. |
 
 ### Distillation toolchains
+
+*The capability-transfer operator: how improvement propagates across model generations.*
 
 "Distillation" now means three different things; this list tracks the agent-facing end of all three:
 
@@ -81,6 +87,18 @@ flowchart LR
 | [torchdistill](https://github.com/yoshitomo-matsubara/torchdistill) | Classical KD (logits/features) — 26+ methods, maintained since 2019; the elder statesman. |
 | [EasyDistill](https://github.com/modelscope/easydistill) | LLM-era data distillation: compose generate/eval/filter/rewrite operators into SFT/DPO pipelines, agent trajectories included. |
 | [distilly](https://github.com/titanwings/distilly) | Cognitive distillation: people → skills. (The org-side story lives in [awesome-ai-native](https://github.com/vicfei/awesome-ai-native).) |
+
+### Weight editing (weight-space programming)
+
+*The behavioral-surgery operator: minutes-latency, local, and structurally self-referential — the improver is a model editing models. Youngest of the three (Nov 2026); treat claims accordingly.*
+
+| Work | What it is |
+|---|---|
+| [Sparks of Weight Space Programming](https://rikiyat.github.io/blog/weight-space-programming/) · [full experiment logs](https://github.com/RikiyaT/lm_understand-logs) — MIT CSAIL | The origin: an LLM natively reads weights (which game this policy plays, which language this LM learned) and writes them. A 0.016% rank-1 edit to Qwen3.5-0.8B removes thinking loops and lifts MATH-500 from 7.9% to 48.1% — mostly unblocking existing capability, not injecting knowledge. Blog-only, not peer-reviewed; complete logs published. |
+| [Auditing clinical decision networks](https://arxiv.org/abs/2611.05341) | First follow-up paper: weight-space programming as an audit lens for clinical decision networks. |
+| [Image-restoration diffusion models](https://arxiv.org/abs/2611.04268) | Technical conjectures plus a recursive improvement loop — the first WSP × RSI crossover. |
+
+Notable derivative: [weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) — all 475k CNN weights written from closed-form statistics, no gradients: 73.7% test accuracy vs 82.4% for the same-size trained CNN.
 
 ## Papers: the self-training recipes
 
@@ -110,6 +128,7 @@ The training loop's fuel is data the model (or an agent) generates itself:
 2. **Experiment comparability at scale.** autoresearch's fixed-budget trick works on one GPU; there is no standard for comparing agent-run experiments across platforms.
 3. **License clarity.** Several fast-moving systems in this space ship non-OSI licenses (source-available, NOASSERTION) — check before commercial use.
 4. **Distillation governance.** When agents distill teachers into students (or colleagues into skills), provenance and permission trails don't exist yet.
+5. **Weight-editing verification.** Surgical edits bypass training-time alignment — they can remove refusal behavior as easily as thinking loops (see abliteration), and no verification method exists for low-rank edits at scale.
 
 ## 🤖 Radar
 

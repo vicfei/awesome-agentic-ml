@@ -38,7 +38,8 @@ STRONG = re.compile(
     r"agentic (data|ml|machine learning|training|automl)|data agent|"
     r"automated data engineer|autonomous (training|experiment|data|ml)|"
     r"machine learning agent|automl agent|data pipeline agent|"
-    r"self-improving (model|training)|ml automation|autonomous experimentation",
+    r"self-improving (model|training)|ml automation|autonomous experimentation|"
+    r"weight-space programming|weight editing",
     re.IGNORECASE,
 )
 DATA = re.compile(r"data|dataset|clean|curat|warehouse|ETL|pipeline", re.IGNORECASE)
