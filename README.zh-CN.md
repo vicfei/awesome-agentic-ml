@@ -139,6 +139,7 @@ flowchart LR
 - [awesome-self-improving-coding-agents](https://github.com/vicfei/awesome-self-improving-coding-agents) —— 姊妹列表：改进代码的 agent（SWE 可验证的工作）
 - [awesome-ai-native](https://github.com/vicfei/awesome-ai-native) —— 姊妹列表：组织层
 - [awesome-chatbi](https://github.com/vicfei/awesome-chatbi) —— 姊妹列表：数据的服务层——ChatBI / text2SQL / 智能问数的系统与实践
+- [awesome-weight-editing](https://github.com/vicfei/awesome-weight-editing) —— 编辑算子的深度地图（知识编辑/转向/合并/遗忘/WSP）；[modifyllm](https://github.com/vicfei/modifyllm) 将其实现为事务
 - [KaiWU5/Awesome-AI4AI](https://github.com/KaiWU5/Awesome-AI4AI) —— 本领域的论文综述配套（223 篇）
 - [wasiahmad/Awesome-LLM-Synthetic-Data](https://github.com/wasiahmad/Awesome-LLM-Synthetic-Data) —— 合成数据生成阅读清单
 - [hibayesian/awesome-automl-papers](https://github.com/hibayesian/awesome-automl-papers) —— agent 时代之前的 AutoML 典籍

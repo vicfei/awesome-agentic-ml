@@ -139,6 +139,7 @@ The training loop's fuel is data the model (or an agent) generates itself:
 - [awesome-self-improving-coding-agents](https://github.com/vicfei/awesome-self-improving-coding-agents) — sibling: agents improving code (SWE-verifiable work)
 - [awesome-ai-native](https://github.com/vicfei/awesome-ai-native) — sibling: the organizational layer
 - [awesome-chatbi](https://github.com/vicfei/awesome-chatbi) — sibling: data serving — ChatBI / text2SQL / 智能问数 systems & practice
+- [awesome-weight-editing](https://github.com/vicfei/awesome-weight-editing) — the deep map of the editing operator (knowledge editing / steering / merging / unlearning / WSP); [modifyllm](https://github.com/vicfei/modifyllm) implements it as a transaction
 - [KaiWU5/Awesome-AI4AI](https://github.com/KaiWU5/Awesome-AI4AI) — the paper-survey companion to this space (223 papers)
 - [wasiahmad/Awesome-LLM-Synthetic-Data](https://github.com/wasiahmad/Awesome-LLM-Synthetic-Data) — synthetic-data generation reading list
 - [hibayesian/awesome-automl-papers](https://github.com/hibayesian/awesome-automl-papers) — the pre-agent AutoML canon
