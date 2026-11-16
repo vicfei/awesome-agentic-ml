@@ -66,6 +66,7 @@ flowchart LR
 | [karpathy](https://github.com/K-Dense-AI/karpathy)（agent，不是本人） | 一个"智能体机器学习工程师"——把职位做成了系统。 |
 | [Optim-Agent](https://github.com/Optim-Agent/optim-agent) | LLM agent 当你的超参优化器——AutoML 核心回路的 agent 化重做。 |
 | [autogluon-assistant](https://github.com/autogluon/autogluon-assistant) | AutoGluon 之上的多智能体系统，端到端多模态 AutoML。 |
+| [agentic-data-engineering](https://github.com/datajuicer/agentic-data-engineering) — 阿里 Data-Juicer | Agent 直接驾驶数据流水线循环：人给目标、预算与数据范围，Agent 设计配方、构建并运行实验、读取结果、更新下一轮数据配比。 |
 
 ### 训练框架与后训练
 
@@ -75,6 +76,7 @@ flowchart LR
 |---|---|
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [论文](https://arxiv.org/abs/2511.14460) | 步级 MDP 转移的智能体 RL；在线策略蒸馏（OPD）分支打通 RL 训练与蒸馏。 |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [报告](https://arxiv.org/abs/2609.08183) | 以 routing harness 做 agentic 后训练得到的开源 4B/9B agent 模型；Jev 决策原语。 |
+| [Piccolo](https://github.com/agentscope-ai/Piccolo) — 阿里 AgentScope | 开源权重 4B/9B/27B 决策模型（工具审核、上下文保留、数据工作流）——由 agentic data engineering 循环产出（665 万条原始记录，切片级学习诊断驱动下一轮数据配方）；GGUF 本地部署。 |
 
 ### 蒸馏工具链
 

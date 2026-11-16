@@ -66,6 +66,7 @@ flowchart LR
 | [karpathy](https://github.com/K-Dense-AI/karpathy) (the agent, not the person) | An agentic Machine Learning Engineer — the job title as a system. |
 | [Optim-Agent](https://github.com/Optim-Agent/optim-agent) | LLM agents as your hyperparameter optimizer — the AutoML core loop, agent-first. |
 | [autogluon-assistant](https://github.com/autogluon/autogluon-assistant) | Multi-agent system on top of AutoGluon for end-to-end multimodal AutoML. |
+| [agentic-data-engineering](https://github.com/datajuicer/agentic-data-engineering) — Alibaba Data-Juicer | Agents run the data-pipeline loop itself: the human sets goal, budget, and data scope; the agent designs the recipe, builds and runs the experiments, reads the results, and updates the next round's data mix. |
 
 ### Training frameworks and post-training
 
@@ -75,6 +76,7 @@ flowchart LR
 |---|---|
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [paper](https://arxiv.org/abs/2511.14460) | Agentic RL with step-level MDP transitions; Online Policy Distillation branch bridges RL training and distillation. |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [report](https://arxiv.org/abs/2609.08183) | Open-weight 4B/9B agent models built via agentic post-training with a routing harness; the Jev decision primitives. |
+| [Piccolo](https://github.com/agentscope-ai/Piccolo) — Alibaba AgentScope | Open-weight 4B/9B/27B decision models for tool review, context retention, and data workflows — produced by an agentic data-engineering loop (6.65M source records; slice-level learning diagnostics feed the next round's data recipe); GGUF-local. |
 
 ### Distillation toolchains
 
