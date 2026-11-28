@@ -77,6 +77,8 @@ flowchart LR
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [论文](https://arxiv.org/abs/2511.14460) | 步级 MDP 转移的智能体 RL；在线策略蒸馏（OPD）分支打通 RL 训练与蒸馏。 |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [报告](https://arxiv.org/abs/2609.08183) | 以 routing harness 做 agentic 后训练得到的开源 4B/9B agent 模型；Jev 决策原语。 |
 | [Piccolo](https://github.com/agentscope-ai/Piccolo) — 阿里 AgentScope | 开源权重 4B/9B/27B 决策模型（工具审核、上下文保留、数据工作流）——由 agentic data engineering 循环产出（665 万条原始记录，切片级学习诊断驱动下一轮数据配方）；GGUF 本地部署。 |
+| [uni-agent](https://github.com/verl-project/uni-agent) — verl 项目 | 把任意现成 agent harness（Claude Code、mini-swe-agent、任何 OpenAI/Anthropic 兼容端点）变成可训练对象：将模型端点指向 Uni-Agent 网关——请求串进、训练 token 出；1000+ 并发长程会话产出可追溯的 SFT/RL 轨迹。 |
+| [AgentGym-RL](https://github.com/WooooDyy/AgentGym-RL) · [论文](https://arxiv.org/abs/2509.08755)（ICLR 2026 Oral） | 多轮 RL 训练长程决策：27 个真实任务上把开源 7B 级 agent 提升到匹敌商用模型。 |
 
 ### 蒸馏工具链
 

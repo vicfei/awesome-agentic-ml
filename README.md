@@ -77,6 +77,8 @@ flowchart LR
 | [Agent-R1](https://github.com/AgentR1/Agent-R1) · [paper](https://arxiv.org/abs/2511.14460) | Agentic RL with step-level MDP transitions; Online Policy Distillation branch bridges RL training and distillation. |
 | [NeoHorse](https://github.com/TokenRhythm/NeoHorse) · [report](https://arxiv.org/abs/2609.08183) | Open-weight 4B/9B agent models built via agentic post-training with a routing harness; the Jev decision primitives. |
 | [Piccolo](https://github.com/agentscope-ai/Piccolo) — Alibaba AgentScope | Open-weight 4B/9B/27B decision models for tool review, context retention, and data workflows — produced by an agentic data-engineering loop (6.65M source records; slice-level learning diagnostics feed the next round's data recipe); GGUF-local. |
+| [uni-agent](https://github.com/verl-project/uni-agent) — verl project | Turn any existing agent harness (Claude Code, mini-swe-agent, anything OpenAI/Anthropic-compatible) into a trainable one: point its model endpoint at the Uni-Agent Gateway — requests in, training tokens out; 1,000+ concurrent long-horizon sessions yield traceable SFT/RL trajectories. |
+| [AgentGym-RL](https://github.com/WooooDyy/AgentGym-RL) · [paper](https://arxiv.org/abs/2509.08755) (ICLR 2026 Oral) | Multi-turn RL for long-horizon decision making across 27 real-world tasks; lifts open 7B-scale agents to match commercial models. |
 
 ### Distillation toolchains
 
